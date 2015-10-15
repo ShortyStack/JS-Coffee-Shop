@@ -61,9 +61,13 @@
         "hot chocolate": 2.50
     };
 
-    myImage.addEventListener('click', makeCoffee);
+    drinksOrdered = [];
+    console.log(drinksOrdered);
 
-    function makeCoffee() {
+    myImage.addEventListener('click', makeCoffee("brew"));
+
+    function makeCoffee(drinkType) {
+        drinksOrdered.push(drinkType);
         myImage.setAttribute('src', 'static/coffee_machine.jpg');
         setTimeout(coffeeMug, 1000);
     }
